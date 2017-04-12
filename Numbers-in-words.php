@@ -131,5 +131,19 @@ function number_in_words($number) {
 }
 
 
+//
+	function price_delimiter($price_wc){
+		$one_price = explode(".", $price_wc);
+		$pr = $one_price[0];
+		$cent = explode(" ", $pr[1]);
+		$cent_pr = $cent[0];
+		$mass = array(
+			"price" => $pr,
+			"cent" => $cent_pr
+			);
+		return $mass;
+	}
+
+
 
 ?>
